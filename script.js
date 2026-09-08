@@ -297,11 +297,10 @@ navLeaderboard.addEventListener("click", (e) => {
 navTest.addEventListener("click", (e) => {
     e.preventDefault();
 
-    leaderboardScreen.classList.add("hidden");
     resultScreen.classList.add("hidden");
     testScreen.classList.add("hidden");
 
-    startScreen.classList.remove("hidden");
+    switchScreen(leaderboardScreen, startScreen);
 });
 
 
@@ -407,3 +406,26 @@ async function loadLeaderboard() {
         `;
     }
 }
+
+function switchScreen(hideScreen, showScreen) {
+    hideScreen.classList.add("page-exit");
+
+    setTimeout(() => {
+        hideScreen.classList.add("hidden");
+        hideScreen.classList.remove("page-exit");
+
+        showScreen.classList.remove("hidden");
+        showScreen.classList.add("page-enter");
+
+        setTimeout(() => {
+            showScreen.classList.remove("page-enter");
+        }, 250);
+    }, 120);
+}s
+
+const navLogo = document.getElementById("nav-logo");
+
+navLogo.addEventListener("click", (e) => {
+    e.preventDefault();
+    navTest.click();
+});
