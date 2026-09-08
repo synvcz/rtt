@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,24 +9,41 @@
 
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="font.css">
-    <link rel="icon" href="/assets/rt-light.png" media="(prefers-color-scheme: light)">
-    <link rel="icon" href="/assets/rt-dark.png" media="(prefers-color-scheme: dark)">
+
+    <link
+        rel="icon"
+        href="/assets/rt-light.png"
+        media="(prefers-color-scheme: light)"
+    >
+
+    <link
+        rel="icon"
+        href="/assets/rt-dark.png"
+        media="(prefers-color-scheme: dark)"
+    >
 </head>
+
 <body>
 
+    <!-- Navigation -->
     <nav class="navbar">
-        <a href="/" class="logo" id="nav-logo">Reaction Test</a>
+
+        <a href="#" class="logo" id="nav-logo">
+            Reaction Test
+        </a>
 
         <div class="nav-links">
             <a href="#" id="nav-test">Test</a>
             <a href="#" id="nav-leaderboard">Leaderboard</a>
-            <a href="#">About</a>
+            <a href="#" id="nav-about">About</a>
         </div>
+
     </nav>
+
 
     <main>
 
-        <!-- Start screen -->
+        <!-- Start Screen -->
         <section id="start-screen">
 
             <h1>Reaction Time Test</h1>
@@ -34,107 +52,431 @@
                 When the red box turns green, click as quickly as you can.
             </p>
 
-            <span>Click here to start.</span>
+            <span>
+                Click here to start.
+            </span>
+
         </section>
 
 
-        <!-- Reaction test -->
+        <!-- Reaction Test -->
         <section id="test-screen" class="hidden">
 
             <div id="reaction-box">
-                <h2>Wait for green...</h2>
+
+                <h2>
+                    Wait for green...
+                </h2>
+
             </div>
-                <button id="too-soon-button" class="hidden">
-        Try Again
-    </button>
-        </section>
 
-        <!-- Result -->
-<section id="result-screen" class="hidden">
-    <div class="result">
-        <span>Your reaction time</span>
-
-        <h2 id="result-time">0 ms</h2>
-
-        <p id="result-rating"></p>
-
-        <div class="result-buttons">
-            <button id="try-again">
+            <button id="too-soon-button" class="hidden">
                 Try Again
             </button>
 
-            <button id="save-result">
-                Save Score
-            </button>
-        </div>
-    </div>
-</section>
+        </section>
 
-<!-- Leaderboard -->
-<section id="leaderboard-screen" class="hidden">
 
-    <div class="leaderboard-container">
+        <!-- Result -->
+        <section id="result-screen" class="hidden">
 
-        <h1>Leaderboard</h1>
+            <div class="result">
 
-        <p class="leaderboard-subtitle">
-            The fastest reaction times.
-        </p>
+                <span>
+                    Your reaction time
+                </span>
 
-        <div id="leaderboard-list">
+                <h2 id="result-time">
+                    0 ms
+                </h2>
 
-            <div class="leaderboard-header">
-                <span>#</span>
-                <span>Username</span>
-                <span>Reaction Time</span>
+                <p id="result-rating"></p>
+
+                <div class="result-buttons">
+
+                    <button id="try-again">
+                        Try Again
+                    </button>
+
+                    <button id="save-result">
+                        Save Score
+                    </button>
+
+                </div>
+
             </div>
 
-            <!-- Scores will be inserted here -->
+        </section>
+
+
+        <!-- Leaderboard -->
+        <section id="leaderboard-screen" class="hidden">
+
+            <div class="leaderboard-container">
+
+                <h1>
+                    Leaderboard
+                </h1>
+
+                <p class="leaderboard-subtitle">
+                    The fastest reaction times.
+                </p>
+
+                <div id="leaderboard-list">
+
+                    <div class="leaderboard-header">
+                        <span>#</span>
+                        <span>Username</span>
+                        <span>Reaction Time</span>
+                    </div>
+
+                </div>
+
+                <button id="back-to-test">
+                    Back to Test
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- About -->
+        <section id="about-screen" class="about-screen hidden">
+
+            <div class="about-container">
+
+                <!-- Hero -->
+                <div class="about-hero">
+
+                    <span class="about-eyebrow">
+                        REACTION TEST
+                    </span>
+
+                    <h1>
+                        How fast<br>
+                        can you react?
+                    </h1>
+
+                    <p>
+                        Reaction Test measures how quickly you respond
+                        to a visual signal, giving you a result in milliseconds.
+                    </p>
+
+                </div>
+
+
+                <!-- About the Test -->
+                <section class="about-section">
+
+                    <span class="about-label">
+                        ABOUT THE TEST
+                    </span>
+
+                    <h2>
+                        A test of visual reaction time.
+                    </h2>
+
+                    <p>
+                        Reaction time is the amount of time it takes to respond
+                        after noticing a stimulus. In this test, the stimulus
+                        is a screen changing from red to green.
+                    </p>
+
+                    <p>
+                        Your score represents the time between the moment
+                        the screen turns green and the moment you click.
+                        The result is measured in milliseconds (ms).
+                    </p>
+
+                </section>
+
+
+                <!-- How It Works -->
+                <section class="about-section">
+
+                    <span class="about-label">
+                        HOW IT WORKS
+                    </span>
+
+
+                    <!-- Step 01 -->
+                    <div class="about-block">
+
+                        <span class="about-number">
+                            01
+                        </span>
+
+                        <div>
+
+                            <h3>
+                                Wait for green.
+                            </h3>
+
+                            <p>
+                                The test begins with a red screen.
+                                After a random delay, the screen changes to green.
+                                Stay focused and wait for the signal.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Step 02 -->
+                    <div class="about-block">
+
+                        <span class="about-number">
+                            02
+                        </span>
+
+                        <div>
+
+                            <h3>
+                                React.
+                            </h3>
+
+                            <p>
+                                Click as soon as the screen turns green.
+                                The test records the time between the
+                                green signal and your click.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Step 03 -->
+                    <div class="about-block">
+
+                        <span class="about-number">
+                            03
+                        </span>
+
+                        <div>
+
+                            <h3>
+                                Get your result.
+                            </h3>
+
+                            <p>
+                                Your reaction time is displayed immediately.
+                                Lower numbers mean you reacted faster.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- Understanding Your Score -->
+                <section class="about-section">
+
+                    <span class="about-label">
+                        UNDERSTANDING YOUR SCORE
+                    </span>
+
+                    <h2>
+                        What does your time mean?
+                    </h2>
+
+                    <p>
+                        Reaction times vary from person to person and can be
+                        affected by factors such as attention, familiarity
+                        with the test, and your input device.
+                    </p>
+
+
+                    <div class="score-guide">
+
+                        <div class="score-row">
+                            <span>&lt; 150 ms</span>
+                            <span>Insane!</span>
+                        </div>
+
+                        <div class="score-row">
+                            <span>150–199 ms</span>
+                            <span>Excellent!</span>
+                        </div>
+
+                        <div class="score-row">
+                            <span>200–249 ms</span>
+                            <span>Fast!</span>
+                        </div>
+
+                        <div class="score-row">
+                            <span>250–299 ms</span>
+                            <span>Good!</span>
+                        </div>
+
+                        <div class="score-row">
+                            <span>300–399 ms</span>
+                            <span>Average</span>
+                        </div>
+
+                        <div class="score-row">
+                            <span>400+ ms</span>
+                            <span>Slow</span>
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- Accuracy -->
+                <section class="about-section">
+
+                    <span class="about-label">
+                        ACCURACY
+                    </span>
+
+                    <h2>
+                        Why can your score change?
+                    </h2>
+
+                    <p>
+                        Reaction time is not always the same. Your attention,
+                        timing, surroundings, and input device can all affect
+                        the result.
+                    </p>
+
+                    <p>
+                        For the most consistent results, use the same device
+                        and input method when comparing your scores.
+                    </p>
+
+                </section>
+
+
+                <!-- Leaderboard -->
+                <section class="about-section">
+
+                    <span class="about-label">
+                        LEADERBOARD
+                    </span>
+
+                    <h2>
+                        See how you compare.
+                    </h2>
+
+                    <p>
+                        You can save your result with a username and add it
+                        to the global leaderboard. Scores are ranked from
+                        the fastest reaction time to the slowest.
+                    </p>
+
+                    <p>
+                        No account is required. You can simply enter a username
+                        when you choose to save a score.
+                    </p>
+
+                </section>
+
+
+                <!-- Tips -->
+                <section class="about-section">
+
+                    <span class="about-label">
+                        TIPS
+                    </span>
+
+                    <h2>
+                        Want a more consistent result?
+                    </h2>
+
+                    <ul class="about-tips">
+
+                        <li>
+                            Focus on the center of the screen.
+                        </li>
+
+                        <li>
+                            Keep your cursor ready before starting.
+                        </li>
+
+                        <li>
+                            Don't click before the screen turns green.
+                        </li>
+
+                        <li>
+                            Use the same device when comparing results.
+                        </li>
+
+                        <li>
+                            Try several rounds instead of relying on one score.
+                        </li>
+
+                    </ul>
+
+                </section>
+
+
+                <!-- Ending -->
+                <div class="about-ending">
+
+                    <h2>
+                        Ready to<br>
+                        test yourself?
+                    </h2>
+
+                    <button id="about-start">
+                        Take the test
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Save Score Modal -->
+    <div id="username-modal" class="modal hidden">
+
+        <div class="modal-content">
+
+            <h2>
+                Save your score
+            </h2>
+
+            <p>
+                Enter a username to save your result
+                and appear on the leaderboard.
+            </p>
+
+            <input
+                type="text"
+                id="username-input"
+                placeholder="Your username"
+                maxlength="20"
+            >
+
+            <button id="save-score">
+                Save Score
+            </button>
+
+            <button id="skip-score">
+                Skip
+            </button>
 
         </div>
 
-        <button id="back-to-test">
-            Back to Test
-        </button>
-
     </div>
 
-</section>
-    </main>
 
-    <!-- Save Score Modal -->
-
-<div id="username-modal" class="modal hidden">
-
-    <div class="modal-content">
-
-        <h2>Save your score</h2>
-
-        <p>
-            Enter a username to save your result
-            and appear on the leaderboard.
-        </p>
-
-        <input
-            type="text"
-            id="username-input"
-            placeholder="Your username"
-            maxlength="20"
-        >
-
-        <button id="save-score">
-            Save Score
-        </button>
-
-        <button id="skip-score">
-            Skip
-        </button>
-
-    </div>
-
-</div>
+    <!-- Supabase -->
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <!-- Main JavaScript -->
     <script src="script.js"></script>
 
 </body>
+
 </html>
