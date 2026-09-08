@@ -13,13 +13,11 @@
 <body>
 
     <nav class="navbar">
-        <div class="logo">
-            Reaction Test
-        </div>
+        <a href="index.html" class="logo">Reaction Test</a>
 
         <div class="nav-links">
-            <a href="#">Test</a>
-            <a href="#">Leaderboard</a>
+            <a href="index.html" id="nav-test">Test</a>
+            <a href="#" id="nav-leaderboard">Leaderboard</a>
             <a href="#">About</a>
         </div>
     </nav>
@@ -35,7 +33,7 @@
                 When the red box turns green, click as quickly as you can.
             </p>
 
-            <span>Click anywhere to start.</span>
+            <span>Click here to start.</span>
         </section>
 
 
@@ -50,26 +48,91 @@
     </button>
         </section>
 
-
         <!-- Result -->
-        <section id="result-screen" class="hidden">
+<section id="result-screen" class="hidden">
+    <div class="result">
+        <span>Your reaction time</span>
 
-            <div class="result">
-                <span>Your reaction time</span>
+        <h2 id="result-time">0 ms</h2>
 
-                <h2 id="result-time">0 ms</h2>
+        <p id="result-rating"></p>
 
-                <p id="result-rating"></p>
+        <div class="result-buttons">
+            <button id="try-again">
+                Try Again
+            </button>
 
-                <button id="try-again">
-                    Try Again
-                </button>
+            <button id="save-result">
+                Save Score
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- Leaderboard -->
+<section id="leaderboard-screen" class="hidden">
+
+    <div class="leaderboard-container">
+
+        <h1>Leaderboard</h1>
+
+        <p class="leaderboard-subtitle">
+            The fastest reaction times.
+        </p>
+
+        <div id="leaderboard-list">
+
+            <div class="leaderboard-header">
+                <span>#</span>
+                <span>Username</span>
+                <span>Reaction Time</span>
             </div>
 
-        </section>
+            <!-- Scores will be inserted here -->
 
+        </div>
+
+        <button id="back-to-test">
+            Back to Test
+        </button>
+
+    </div>
+
+</section>
     </main>
 
+    <!-- Save Score Modal -->
+
+<div id="username-modal" class="modal hidden">
+
+    <div class="modal-content">
+
+        <h2>Save your score</h2>
+
+        <p>
+            Enter a username to save your result
+            and appear on the leaderboard.
+        </p>
+
+        <input
+            type="text"
+            id="username-input"
+            placeholder="Your username"
+            maxlength="20"
+        >
+
+        <button id="save-score">
+            Save Score
+        </button>
+
+        <button id="skip-score">
+            Skip
+        </button>
+
+    </div>
+
+</div>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script src="script.js"></script>
 
 </body>

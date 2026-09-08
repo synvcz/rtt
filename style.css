@@ -7,27 +7,29 @@
 body {
     font-family: Inter, sans-serif;
     background: #2b87d2;
-    /* #3188c9 */
     color: white;
     min-height: 100vh;
 }
 
+
+/* NAVBAR */
+
 .navbar {
     background: #ffffff;
     height: 70px;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
 
     padding: 0 45px;
-
-    /* background: rgba(0, 0, 0, 0.08); */
 }
 
 .logo {
     font-size: 24px;
     font-weight: 500;
-    color:black;
+    color: black;
+    text-decoration: none;
 }
 
 .nav-links {
@@ -36,8 +38,9 @@ body {
 }
 
 .nav-links a {
-    color: rgb(0, 0, 0);
+    color: black;
     text-decoration: none;
+
     font-size: 20px;
 
     opacity: 0.85;
@@ -47,6 +50,9 @@ body {
 .nav-links a:hover {
     opacity: 1;
 }
+
+
+/* MAIN */
 
 main {
     min-height: calc(100vh - 70px);
@@ -58,6 +64,9 @@ main {
     text-align: center;
 }
 
+
+/* START SCREEN */
+
 #start-screen {
     margin-top: -50px;
 }
@@ -65,6 +74,7 @@ main {
 h1 {
     font-size: 78px;
     font-weight: 400;
+
     margin-bottom: 15px;
 }
 
@@ -77,7 +87,12 @@ h1 {
     font-size: 23px;
 }
 
+
+/* TEST SCREEN */
+
 #test-screen {
+    position: relative;
+
     width: 100%;
     height: calc(100vh - 70px);
 }
@@ -87,13 +102,12 @@ h1 {
     height: 100%;
 
     background: #ce2637;
-    /* #d94a4a */
+
     display: flex;
     align-items: center;
     justify-content: center;
 
     cursor: pointer;
-
     user-select: none;
 }
 
@@ -106,47 +120,8 @@ h1 {
     background: #42b883;
 }
 
-.result {
-    text-align: center;
-}
 
-.result span {
-    font-size: 24px;
-}
-
-.result h2 {
-    font-size: 90px;
-    font-weight: 400;
-    margin: 10px 0;
-}
-
-.result p {
-    font-size: 28px;
-    margin-bottom: 30px;
-}
-
-button {
-    border: none;
-    padding: 14px 30px;
-
-    font-size: 18px;
-
-    border-radius: 6px;
-
-    cursor: pointer;
-}
-
-button:hover {
-    transform: scale(1.03);
-}
-
-.hidden {
-    display: none !important;
-}
-
-#test-screen {
-    position: relative;
-}
+/* TOO SOON BUTTON */
 
 #too-soon-button {
     position: absolute;
@@ -161,4 +136,226 @@ button:hover {
 
 #too-soon-button:hover {
     transform: translateX(-50%) scale(1.03);
+}
+
+
+/* RESULT SCREEN */
+
+.result {
+    text-align: center;
+}
+
+.result span {
+    font-size: 24px;
+}
+
+.result h2 {
+    font-size: 90px;
+    font-weight: 400;
+
+    margin: 10px 0;
+}
+
+.result p {
+    font-size: 28px;
+
+    margin-bottom: 30px;
+}
+
+.result-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+
+/* BUTTONS */
+
+button {
+    border: none;
+
+    padding: 14px 30px;
+
+    font-size: 18px;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+}
+
+button:hover {
+    transform: scale(1.03);
+}
+
+#save-result {
+    background: white;
+    color: #222;
+}
+
+#try-again {
+    background: white;
+    color: #222;
+}
+
+
+/* USERNAME MODAL */
+
+.modal {
+    position: fixed;
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.35);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 1000;
+}
+
+.modal-content {
+    width: 400px;
+
+    background: white;
+    color: #222;
+
+    padding: 35px;
+
+    border-radius: 12px;
+
+    text-align: center;
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content h2 {
+    font-size: 28px;
+
+    margin-bottom: 12px;
+}
+
+.modal-content p {
+    font-size: 16px;
+    line-height: 1.5;
+
+    margin-bottom: 22px;
+}
+
+
+/* USERNAME INPUT */
+
+#username-input {
+    width: 100%;
+
+    padding: 12px 14px;
+
+    font-size: 16px;
+
+    border: 1px solid #ccc;
+    border-radius: 6px;
+
+    outline: none;
+
+    margin-bottom: 15px;
+}
+
+#username-input:focus {
+    border-color: #3188c9;
+}
+
+
+/* MODAL BUTTONS */
+
+#save-score {
+    width: 100%;
+
+    background: #3188c9;
+    color: white;
+
+    margin-bottom: 8px;
+}
+
+#skip-score {
+    width: 100%;
+
+    background: transparent;
+    color: #666;
+
+    font-size: 14px;
+}
+
+
+/* UTILITY */
+
+.hidden {
+    display: none !important;
+}
+
+/* LEADERBOARD */
+
+#leaderboard-screen {
+    width: 100%;
+    min-height: calc(100vh - 70px);
+    padding: 60px 20px;
+}
+
+.leaderboard-container {
+    width: 800px;
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.leaderboard-container h1 {
+    font-size: 64px;
+    margin-bottom: 5px;
+}
+
+.leaderboard-subtitle {
+    font-size: 20px;
+    margin-bottom: 35px;
+}
+
+#leaderboard-list {
+    width: 100%;
+    background: white;
+    color: #222;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.leaderboard-header,
+.leaderboard-row {
+    display: grid;
+    grid-template-columns: 80px 1fr 180px;
+    align-items: center;
+    padding: 18px 25px;
+}
+
+.leaderboard-header {
+    font-weight: 600;
+    border-bottom: 1px solid #ddd;
+}
+
+.leaderboard-row {
+    border-bottom: 1px solid #eee;
+    font-size: 18px;
+}
+
+.leaderboard-row:last-child {
+    border-bottom: none;
+}
+
+.leaderboard-rank {
+    font-weight: 600;
+}
+
+.leaderboard-time {
+    font-weight: 600;
+}
+
+#back-to-test {
+    margin-top: 25px;
+    background: white;
+    color: #222;
 }
