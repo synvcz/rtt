@@ -29,6 +29,9 @@ const usernameInput = document.getElementById("username-input");
 const saveScore = document.getElementById("save-score");
 const skipScore = document.getElementById("skip-score");
 
+const navAbout = document.getElementById("nav-about");
+const aboutScreen = document.getElementById("about-screen");
+
 
 // =========================
 // LEADERBOARD ELEMENTS
@@ -297,10 +300,25 @@ navLeaderboard.addEventListener("click", (e) => {
 navTest.addEventListener("click", (e) => {
     e.preventDefault();
 
-    resultScreen.classList.add("hidden");
-    testScreen.classList.add("hidden");
+    clearTimeout(timeout);
 
-    switchScreen(leaderboardScreen, startScreen);
+    waiting = false;
+    ready = false;
+
+    startScreen.classList.add("hidden");
+    testScreen.classList.add("hidden");
+    resultScreen.classList.add("hidden");
+    leaderboardScreen.classList.add("hidden");
+    aboutScreen.classList.add("hidden");
+    usernameModal.classList.add("hidden");
+    tooSoonButton.classList.add("hidden");
+
+    startScreen.classList.remove("hidden");
+    startScreen.classList.add("page-enter");
+
+    setTimeout(() => {
+        startScreen.classList.remove("page-enter");
+    }, 250);
 });
 
 
@@ -423,9 +441,55 @@ function switchScreen(hideScreen, showScreen) {
     }, 120);
 }
 
+// navAbout.addEventListener("click", (e) => {
+//     e.preventDefault();
+
+//     clearTimeout(timeoutId);
+
+//     switchScreen(startScreen, aboutScreen);
+// });
+
+// function switchScreen(hideScreen, showScreen) {
+//     if (hideScreen) {
+//         hideScreen.classList.add("hidden");
+//     }
+
+//     showScreen.classList.add("page-enter");
+
+//     setTimeout(() => {
+//         showScreen.classList.remove("page-enter");
+//     }, 500);
+// }
+
 const navLogo = document.getElementById("nav-logo");
 
 navLogo.addEventListener("click", (e) => {
     e.preventDefault();
+    navTest.click();
+});
+
+navAbout.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    clearTimeout(timeout);
+
+    startScreen.classList.add("hidden");
+    testScreen.classList.add("hidden");
+    resultScreen.classList.add("hidden");
+    leaderboardScreen.classList.add("hidden");
+    usernameModal.classList.add("hidden");
+    tooSoonButton.classList.add("hidden");
+
+    aboutScreen.classList.remove("hidden");
+    aboutScreen.classList.add("page-enter");
+
+    setTimeout(() => {
+        aboutScreen.classList.remove("page-enter");
+    }, 500);
+});
+
+const aboutStart = document.getElementById("about-start");
+
+aboutStart.addEventListener("click", () => {
     navTest.click();
 });
