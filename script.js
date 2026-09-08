@@ -421,7 +421,7 @@ function switchScreen(hideScreen, showScreen) {
             showScreen.classList.remove("page-enter");
         }, 250);
     }, 120);
-}s
+}
 
 const navLogo = document.getElementById("nav-logo");
 
