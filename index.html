@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Reaction Time Test</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="font.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+            Reaction Test
+        </div>
+
+        <div class="nav-links">
+            <a href="#">Test</a>
+            <a href="#">Leaderboard</a>
+            <a href="#">About</a>
+        </div>
+    </nav>
+
+    <main>
+
+        <!-- Start screen -->
+        <section id="start-screen">
+
+            <h1>Reaction Time Test</h1>
+
+            <p>
+                When the red box turns green, click as quickly as you can.
+            </p>
+
+            <span>Click anywhere to start.</span>
+        </section>
+
+
+        <!-- Reaction test -->
+        <section id="test-screen" class="hidden">
+
+            <div id="reaction-box">
+                <h2>Wait for green...</h2>
+            </div>
+                <button id="too-soon-button" class="hidden">
+        Try Again
+    </button>
+        </section>
+
+
+        <!-- Result -->
+        <section id="result-screen" class="hidden">
+
+            <div class="result">
+                <span>Your reaction time</span>
+
+                <h2 id="result-time">0 ms</h2>
+
+                <p id="result-rating"></p>
+
+                <button id="try-again">
+                    Try Again
+                </button>
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
