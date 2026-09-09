@@ -243,7 +243,7 @@ main {
 #too-soon-button {
     position: absolute;
 
-    bottom: 40px;
+    bottom: 125px;
 
     padding: 12px 22px;
 
@@ -917,7 +917,6 @@ main {
         --navbar-height: 64px;
     }
 
-
     /* Navbar */
 
     .navbar {
@@ -931,7 +930,6 @@ main {
     .nav-links a {
         font-size: 13px;
     }
-
 
     /* Start */
 
@@ -1011,7 +1009,6 @@ main {
     }
 
 }
-
 
 /* =========================
    SMALL MOBILE
