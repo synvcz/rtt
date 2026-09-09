@@ -243,9 +243,9 @@ main {
 #too-soon-button {
     position: absolute;
 
-    bottom: 125px;
+    bottom: 136.5px;
 
-    padding: 12px 22px;
+    padding: 13px 24px;
 
     border: none;
     border-radius: 10px;
@@ -255,7 +255,7 @@ main {
 
     font-size: 14px;
     font-weight: 600;
-
+    cursor: pointer;
     transition:
         transform 0.2s ease,
         opacity 0.2s ease;
@@ -265,6 +265,9 @@ main {
     transform: translateY(-2px);
 }
 
+#too-soon-button:active {
+    transform: translateY(0);
+}
 
 /* =========================
    RESULT SCREEN
